@@ -1,0 +1,5 @@
+{
+    "rust-analyzer.linkedProjects": [
+        "./rusty-py-core/Cargo.toml"
+    ]
+}
