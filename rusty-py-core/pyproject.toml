@@ -1,14 +1,22 @@
 [tool.poetry]
 name = "rusty-py-core"
 version = "0.1.0"
-description = ""
-authors = ["Your Name <you@example.com>"]
+description = "A starter project that uses Rust bindings"
+authors = ["Andrei Fajardo <andrei@nerdai.io>"]
 readme = "README.md"
+packages = [{include = "rusty_py"}]
 
 [tool.poetry.dependencies]
 python = "^3.10"
 
 
+[tool.poetry.group.dev.dependencies]
+pytest = "^7.4.4"
+maturin = "^1.4.0"
+
+[tool.maturin]
+module-name = "rusty_py.core.rust_lib"
+
 [build-system]
-requires = ["poetry-core"]
-build-backend = "poetry.core.masonry.api"
+requires = ["maturin>=1.0,<2.0"]
+build-backend = "maturin"
